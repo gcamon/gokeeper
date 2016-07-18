@@ -1,0 +1,101 @@
+<div ng-controller="priController">
+	<h2>Private store</h2>
+
+	<form>
+		<p>Personal details</p>
+		<p>
+		<label for="">Firstname</label>
+		<input type="text" name="firstname" ng-model="admin.firstname"/>
+		</p>
+		<p>
+		<label>Lastname</label>
+		<input type="text" name="lastname" ng-model="admin.lastname"/>
+		</p>
+		<p>
+		<label>username</label>
+		<input type="text" name="username" ng-model="admin.username"/>
+		</p>
+		<p>
+		<label>password</label>
+		<input type="password" name="password" ng-model="admin.password"/>
+		</p>
+		<p>
+		<label>email</label>
+		<input type="email" name="email" ng-model="admin.email"/>
+		</p>
+		<p>
+		<label>phone</label>
+		<input type="text" name="phone" ng-model="admin.phone"/>
+		</p>
+
+		<p>table structure</p>
+		<p>
+		<label>Number of columns</label>
+		<select name="col" ng-model="admin.col">
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+			<option>11</option>
+			<option>12</option>
+		</select>
+		</p>
+		<p>
+		<input type="button" value="submit" class="btn btn-primary" data-toggle="modal" data-target="#confirmModal"/>
+		</p>
+	</form>
+
+	<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title heading" id="myModalLabel">Check if all are correct.<span style="diplay:block;font-size: 12px; color:green">If wrong? Click the text to edit</span></h4>
+                      </div>
+                      <div class="modal-body">
+                        <form ng-submit = submit()>
+                        <p>
+                          <label for="">Firstname:</label>                      
+                          <input type="text" name="firstname" ng-model="admin.firstname" required class="admin-confirmation"/>
+                      	</p>
+                      	<p>
+                          <label for="">lasname:</label>
+                          <input type="text" name="lastname" ng-model="admin.lastname" class="admin-confirmation" required/>
+                      	</p>
+                      	<p>
+                          <label for="">username:</label>                        
+                          <input type="text" name="username" ng-model="admin.username" class="admin-confirmation" required/>
+                      	</p>
+                      	<p>
+                          <label for="">password:</label>
+                          <input type="text" name="password" ng-model="admin.password" class="admin-confirmation" required/>
+                      	</p>
+                      	<p>
+                          <label for="">email:</label>
+                          <input type="email" name="email" ng-model="admin.email" class="admin-confirmation" required/>
+                      	</p>
+                      	<p>
+                          <label for="">phone:</label>
+                          <input type="text" name="company" ng-model="admin.phone" class="admin-confirmation" required/>
+                      	</p>
+                      	<p>
+                          <label for="">table column:</label>
+                          <input type="text" name="company" ng-model="admin.col" class="admin-confirmation" required/>
+                        </p>
+                        <p>
+                          <input type="button" class="btn btn-primary" data-dismiss="modal" value="OK"/>
+                      	</p>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+	
+</div>			
